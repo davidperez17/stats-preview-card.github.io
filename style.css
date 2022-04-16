@@ -30,7 +30,9 @@ TODO ### Neutral
 
 /* font-family: 'Inter', sans-serif; */
 /* font-family: 'Lexend Deca', sans-serif; */
-
+html {
+  font-size: 62.5%;
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -41,11 +43,10 @@ body {
   flex-direction: column;
 
   background-color: var(--veryDarkBlue);
-
-  font-size: 15px;
 }
 .main {
   width: 80%;
+  height: 530px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,11 +57,11 @@ body {
 }
 
 .info {
-  width: 50%;
+  width: 55%;
   height: 100%;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   padding: 110px 75px 110px 80px;
@@ -72,8 +73,8 @@ body {
   height: auto;
 
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  /* justify-content: flex-start;
+  align-items: flex-start; */
 
   flex-direction: column;
   gap: 30px;
@@ -83,7 +84,7 @@ body {
 
 .info__container h1 {
   color: white;
-  font-size: 2.5rem;
+  font-size: clamp(3vw, 2.3rem, 5vw);
   font-family: "Inter", sans-serif;
 }
 
@@ -92,29 +93,29 @@ body {
 }
 .info__container p {
   color: var(--slightlyTransparentTwo);
-  font-size: 15px;
+  font-size: clamp(1vw, 1.5rem, 3vw);
   font-family: "Lexend Deca", sans-serif;
   line-height: 22px;
 }
 
 .info__extra {
-  width: 100%;
+  width: clamp(320px, 500px, 100%);
   display: flex;
-  justify-content: space-between;
-  font-size: 1.3rem;
+  justify-content: flex-start;
+  gap: 70px;
 }
 
 .info__extra h2 {
   color: var(--White);
 
-  font-size: 20px;
+  font-size: clamp(1vw, 2.5rem, 3vw);
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
 }
 
 .info__extra p {
   color: var(--slightlyTransparentTwo);
-  font-size: 13px;
+  font-size: clamp(1vw, 1.3rem, 3vw);
   font-family: "Lexend Deca", sans-serif;
 
   text-transform: uppercase;
@@ -124,7 +125,7 @@ body {
 }
 
 img {
-  width: 50%;
+  width: 45%;
   height: 100%;
 
   opacity: 0.5;
@@ -132,6 +133,7 @@ img {
 
 @media screen and (max-width: 768px) {
   .main {
+    height: auto;
     flex-direction: column-reverse;
   }
   .info {
@@ -146,6 +148,7 @@ img {
 
   img {
     width: 100%;
+    height: 100%;
   }
 }
 
